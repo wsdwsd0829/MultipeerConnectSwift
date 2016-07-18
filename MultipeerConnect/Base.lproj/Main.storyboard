@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11163.2" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11133"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="7.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MultipeerConnect" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6BK-4l-2JE">
+                                <state key="normal" title="Find Friends"/>
+                                <connections>
+                                    <action selector="showBrowserViewController" destination="BYZ-38-t0r" eventType="touchUpInside" id="pRp-3J-nV1"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bem-TR-8ap">
+                                <state key="normal" title="available"/>
+                                <connections>
+                                    <action selector="makeSelfAvailable" destination="BYZ-38-t0r" eventType="touchUpInside" id="wod-nJ-9Zg"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="soo-hW-Wzo">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Received: " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xek-Cw-Cbd">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHs-uf-whk">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="soo-hW-Wzo" firstAttribute="top" secondItem="Bem-TR-8ap" secondAttribute="bottom" constant="8" id="9hu-V4-yR2"/>
+                            <constraint firstItem="6BK-4l-2JE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="CMV-FA-SMs"/>
+                            <constraint firstItem="Bem-TR-8ap" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-7" id="LuJ-5B-SXp"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="6BK-4l-2JE" secondAttribute="leading" id="OYR-7u-fS9"/>
+                            <constraint firstItem="xek-Cw-Cbd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-7" id="aWg-11-GG7"/>
+                            <constraint firstItem="soo-hW-Wzo" firstAttribute="leading" secondItem="MHs-uf-whk" secondAttribute="trailing" constant="10" id="bzP-pK-oWQ"/>
+                            <constraint firstItem="xek-Cw-Cbd" firstAttribute="top" secondItem="soo-hW-Wzo" secondAttribute="bottom" constant="14" id="eCC-Ux-tIk"/>
+                            <constraint firstItem="soo-hW-Wzo" firstAttribute="centerY" secondItem="MHs-uf-whk" secondAttribute="centerY" id="fXk-oP-PCs"/>
+                            <constraint firstItem="MHs-uf-whk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-7" id="kXU-c4-eTY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="soo-hW-Wzo" secondAttribute="trailing" id="oZb-74-KoF"/>
+                            <constraint firstItem="Bem-TR-8ap" firstAttribute="top" secondItem="6BK-4l-2JE" secondAttribute="bottom" constant="8" id="zzV-jN-ISF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="messageField" destination="soo-hW-Wzo" id="JgP-Zh-bKu"/>
+                        <outlet property="receiveLabel" destination="xek-Cw-Cbd" id="Uxw-aE-69V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-175.19999999999999" y="218.1409295352324"/>
+        </scene>
+    </scenes>
+</document>
