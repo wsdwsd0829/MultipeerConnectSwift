@@ -1,17 +1,22 @@
 # MultipeerConnectSwift
 
-A simple sample to use multipeer connection frameworkin ios
+A simple sample to use multipeer connection framework in ios
 
-Notes:
+##Notes:
 ##To see others: Create Session with PeerId and MCNearbyServiceBrowser to present: MCBrowserViewController
-  ###let nearbyServiceBrowser = MCNearbyServiceBrowser(peer: peerId, serviceType: "abc-txtchat")
+  ```Swift
+  let nearbyServiceBrowser = MCNearbyServiceBrowser(peer: peerId, serviceType: "abc-txtchat")
         bvc = MCBrowserViewController(browser: nearbyServiceBrowser, session: session!)
         guard bvc != nil else { return }
         bvc?.delegate = self
         self.presentViewController(bvc!, animated: true,completion: nil)
-##To able to cancel(MCBrowserViewController): MCBrowserViewControllerDelegate        
+  ```
+##To able to cancel(MCBrowserViewController): MCBrowserViewControllerDelegate 
+
 ##To make youself see by others:  MCAdvertiserAssistant
-  ###advAssitance = MCAdvertiserAssistant(serviceType: serviceType, discoveryInfo: ["max":"discoverme"], session: session!)
+  ```
+  advAssitance = MCAdvertiserAssistant(serviceType: serviceType, discoveryInfo: ["max":"discoverme"], session: session!)
+  ```
   
 ##To handle message and status: MCSessionDelegate
 
